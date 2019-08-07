@@ -10,8 +10,9 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/axios.min.js"></script>
-  </head>
-  <script src="/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script> / fixed script position from line 15 to 13 
+    </head>
+  
 
   <body>
     <div class="container">
@@ -40,9 +41,7 @@
 
           <button id="add-computer-button" class="btn btn-primary">add computer</button>
         </section>
-
-        <footer id="details" style="display: none;" class="section">
-          <h2>details</h2>
+        <h2>details</h2>                                        //fixed h2 position
           <div class="form-group">
             <label class="control-label">nmae</label>
             <input class="form-control" name="name" />
@@ -66,6 +65,8 @@
           <div>
             <input type="hidden" name="id" />
           </div>
+        <footer id="details" style="display: none;" class="section">
+          
         </footer>
       </main>
     </div>
