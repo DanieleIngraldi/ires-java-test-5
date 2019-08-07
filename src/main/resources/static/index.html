@@ -1,79 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Computers</title>
-    <meta charset="UTF-8">
+    <head>
+        <title>Computers</title>
+        <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/axios.min.js"></script>
-    <script src="/js/scripts.js"></script> / fixed script position from line 15 to 13 
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/axios.min.js"></script>
+        <script src="/js/scripts.js"></script>              <!-- fixed script position from line 15 to 13 -->
     </head>
-  
 
-  <body>
-    <div class="container">
-      <header>
-        <h1>Computers</h1>
-      </header>
-      <main>
-        <section id="all-computers" class="section">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>name</th>
-                <th>price</th>
-                <th colspan="2" class="fit"></th>
-              </tr>
-            </thead>
-            <tbody id="rows">
-              <tr style="display: none;">
-                <td></td>
-                <td></td>
-                <td><button class="text-primary">edit</button></td>
-                <td><button class="text-danger">remove</button></td>
-              </tr>
-            </tbody>
-          </table>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Computers</h1>
+            </header>
+            <main>
+                <section id="all-computers" class="section">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>price</th>
+                                <th colspan="2" class="fit"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="rows">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td id="editAndRemove"><button class="text-primary">edit</button></td>
+                                <td id="editAndRemove"><button class="text-danger">remove</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="add-computer-button" class="btn btn-primary">add computer</button>
+                </section>
+                <h2 style="padding:2em">details</h2>                                        <!--fixed h2 position-->
+                <div class="form-group">
+                    <table class="table table-condensed">
+                        <tr><th><label class="control-label">name</label>          <!--fixed typo-->
+                            <td> <input class="form-control" name="name" type="text"/></td></th>
+                            </div>
+                        <div class="form-group">
+                            <th><label class="control-label">price</label>
+                            <td><input class="form-control" name="price" step="0.01" min="0" max="100000" type="number"/></td></th>
+                        </div></tr>
+                        <div class="form-group">
+                            <tr> <th><label class="control-label">is in stock?</label>
+                                <td><input name="isInStock" type="checkbox" /></td></th>
+                        </div>
+                        <div class="form-group">
+                            <th> <label class="control-label">release date</label>
+                            <td> <input class="form-control" name="releaseDate" type="date" /></td></th>
+                        </div>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" onclick="undo()" value="Save" class="btn btn-default">Undo</button>
+                    <button type="submit" onclick="put()" value="Save" class="btn btn-primary">Save</button> 
+                </div>
+                <div>
+                    <input type="hidden" name="id" />
+                </div>
+                <div id="loading-container" style="display:flex">
+                    <div id="loading-content">
+                        loading...
+                    </div>
+                </div>
+                </body>
+                <footer id="details" style="display: none;" class="section">
 
-          <button id="add-computer-button" class="btn btn-primary">add computer</button>
-        </section>
-        <h2>details</h2>                                        //fixed h2 position
-          <div class="form-group">
-            <label class="control-label">nmae</label>
-            <input class="form-control" name="name" />
-          </div>
-          <div class="form-group">
-            <label class="control-label">price</label>
-            <input class="form-control" name="price" step="0.01" min="0" max="100000" />
-          </div>
-          <div class="form-group">
-            <label class="control-label">is in stock?</label>
-            <input name="isInStock" type="checkbox" />
-          </div>
-          <div class="form-group">
-            <label class="control-label">release date</label>
-            <input class="form-control" name="releaseDate" />
-          </div>
-          <div class="form-group text-center">
-            <button type="submit" onclick="undo()" value="Save" class="btn btn-default">Undo</button>
-            <button type="submit" onclick="put()" value="Save" class="btn btn-primary">Save</button>
-          </div>
-          <div>
-            <input type="hidden" name="id" />
-          </div>
-        <footer id="details" style="display: none;" class="section">
-          
-        </footer>
-      </main>
-    </div>
-    <div id="loading-container" style="display: none;">
-      <div id="loading-content">
-        loading...
-      </div>
-    </div>
-  </body>
+                </footer>
+            </main>
 </html>
