@@ -40,25 +40,27 @@
                     <button id="add-computer-button" class="btn btn-primary">add computer</button>
                 </section>
                 <h2 style="padding:2em">details</h2>                                        <!--fixed h2 position-->
-                <div class="form-group section">                                <!--fixed div class-->
-                    <table class="table table-condensed">
-                        <tr><th><label class="control-label">name</label>          <!--fixed typo-->
-                            <td> <input class="form-control" name="name" type="text"/></td></th>
-                            </div>
-                        <div class="form-group">
-                            <th><label class="control-label">price</label>
-                            <td><input class="form-control" name="price" step="0.01" min="0" max="100000" type="number"/></td></th>
-                        </div></tr>
-                        <div class="form-group">
-                            <tr> <th><label class="control-label">is in stock?</label>
-                                <td><input name="isInStock" type="checkbox" /></td></th>
+                <div class="section container">                                <!--fixed div class-->
+                    <div class="row">                                          <!--previous version had 2row2cols -->
+                        <div class="col-md">                                   <!--this one uses bootstrap tho -->
+                            <label class="control-label">name</label>          <!--fixed typo-->
+                            <input class="form-control" name="name" type="text"/>
                         </div>
-                        <div class="form-group">
-                            <th> <label class="control-label">release date</label>
-                            <td> <input class="form-control" name="releaseDate" type="date" /></td></th>
+                        <div class="col-md">
+                            <label class="control-label">price</label>
+                            <input class="form-control" name="price" step="0.01" min="0" max="100000" type="number"/>
                         </div>
-                        </tr>
-                    </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <label class="control-label">is in stock?</label>
+                            <input name="isInStock" type="checkbox" />
+                        </div>
+                        <div class="col-md">
+                            <label class="control-label">release date</label>
+                            <input class="form-control" name="releaseDate" type="date" />
+                        </div>
+                    </div>                  
                 </div>
                 <div class="form-group text-center">
                     <button type="submit" onclick="undo()" value="Save" class="btn btn-default">Undo</button>
