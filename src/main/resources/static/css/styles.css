@@ -50,3 +50,10 @@ form button {
   padding: 1em 2.8em 1em 3em;
   
 }
+
+#editAndRemove {
+    white-space: nowrap;
+    width: 4%;
+    padding-right: 1px;
+    padding-left: 1px;
+}
