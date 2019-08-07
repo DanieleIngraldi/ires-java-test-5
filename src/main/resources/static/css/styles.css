@@ -29,15 +29,18 @@ form button {
 }
 
 #loading-container {
-  width: 100vw;
-  height: 100vh;
+  
   background-color: rgba(200, 200, 200, 0.8);
   display: flex;
-  flex-direction: row;
-  z-index: 1;
+  margin: 0;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  width: 7%;
+  height: 7%;
+  margin-left: -75px;
+  
+  
 }
 
 #loading-content {
@@ -45,5 +48,5 @@ form button {
   border: 2px solid green;
   border-radius: 5px;
   padding: 1em 2.8em 1em 3em;
-  position: relative;
+  
 }
